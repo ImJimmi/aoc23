@@ -11,7 +11,7 @@ function InputForm(props) {
                 <textarea
                     id="input-textarea"
                     className="form-control font-monospace"
-                    rows="16"
+                    rows="12"
                     wrap="off"
                 ></textarea>
             </div>
@@ -21,10 +21,10 @@ function InputForm(props) {
 
 function App() {
     return (
-        <div className="App py-5 px-2">
-            <div className="container bg-light py-5 px-4 rounded shadow border">
+        <div className="App py-sm-5 p-2 text-light">
+            <div className="container p-4 p-md-5 bg-glass shadow-sm rounded">
                 <h1 className="display-1 mb-5 text-center">
-                    Advent of Code 2023
+                    Advent of Code <strong>2023</strong>
                 </h1>
 
                 <div className="row">
@@ -32,6 +32,7 @@ function App() {
 
                     <div className="mx-4 col-lg">
                         <Day1></Day1>
+                        <hr></hr>
                         <Day2></Day2>
                     </div>
                 </div>
