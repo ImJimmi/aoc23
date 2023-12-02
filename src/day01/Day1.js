@@ -1,4 +1,4 @@
-import { useState } from "react";
+import Day from "../components/Day.js";
 
 function calculateCalibrationSum(digitsOptions) {
     function extractDigits(line) {
@@ -30,41 +30,13 @@ function calculateCalibrationSum(digitsOptions) {
         .reduce((total, current) => (total += current));
 }
 
-function Part(props) {
-    return (
-        <div className={props.className}>
-            <h5>{props.name}</h5>
-
-            <div class="d-flex justify-content-start">
-                <button
-                    className="btn btn-primary"
-                    onClick={(event) => {
-                        event.preventDefault();
-                        props.setter(
-                            calculateCalibrationSum(props.digitsOptions)
-                        );
-                    }}
-                >
-                    Calculate
-                </button>
-                <p className="my-auto mx-3">{props.result}</p>
-            </div>
-        </div>
-    );
-}
-
 function Day1() {
-    var [part1Result, setPart1Result] = useState();
-    var [part2Result, setPart2Result] = useState();
-
-    function Part1(props) {
-        return (
-            <Part
-                className={props.className}
-                name="Part 1"
-                setter={setPart1Result}
-                result={part1Result}
-                digitsOptions={[
+    return (
+        <Day
+            day={1}
+            description="Help the elves read the calibration document"
+            calculatePart1={() => {
+                return calculateCalibrationSum([
                     [0],
                     [1],
                     [2],
@@ -75,19 +47,10 @@ function Day1() {
                     [7],
                     [8],
                     [9],
-                ]}
-            ></Part>
-        );
-    }
-
-    function Part2(props) {
-        return (
-            <Part
-                className={props.className}
-                name="Part 2"
-                setter={setPart2Result}
-                result={part2Result}
-                digitsOptions={[
+                ]);
+            }}
+            calculatePart2={() => {
+                return calculateCalibrationSum([
                     [0, "zero"],
                     [1, "one"],
                     [2, "two"],
@@ -98,19 +61,9 @@ function Day1() {
                     [7, "seven"],
                     [8, "eight"],
                     [9, "nine"],
-                ]}
-            ></Part>
-        );
-    }
-
-    return (
-        <div id="day1">
-            <div className="row">
-                <h4 className="col">Day 1</h4>
-                <Part1 className="col"></Part1>
-                <Part2 className="col"></Part2>
-            </div>
-        </div>
+                ]);
+            }}
+        ></Day>
     );
 }
 

@@ -19,14 +19,16 @@ function InputForm(props) {
 
 function App() {
     return (
-        <div className="App p-5">
-            <div className="container bg-light p-5 rounded shadow border">
-                <h1 className="display-1 mb-5">Advent of Code 2023</h1>
+        <div className="App py-5 px-2">
+            <div className="container bg-light py-5 px-4 rounded shadow border">
+                <h1 className="display-1 mb-5 text-center">
+                    Advent of Code 2023
+                </h1>
 
                 <div class="row">
-                    <InputForm className="col-4"></InputForm>
+                    <InputForm className="col-lg"></InputForm>
 
-                    <div className="col">
+                    <div className="mx-4 col-lg">
                         <Day1></Day1>
                     </div>
                 </div>
