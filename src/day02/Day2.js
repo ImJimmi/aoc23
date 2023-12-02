@@ -62,7 +62,7 @@ function Day2() {
     return (
         <Day
             day={2}
-            description="Find the games that are possible"
+            description="Playing cube games with the sky elf"
             calculatePart1={() => {
                 return calculateSumOfPossibleGameIDs();
             }}
