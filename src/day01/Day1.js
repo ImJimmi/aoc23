@@ -1,4 +1,5 @@
 import Day from "../components/Day.js";
+import parsePuzzleInput from "../utils/Parser.js";
 
 function calculateCalibrationSum(digitsOptions) {
     function extractDigits(line) {
@@ -19,9 +20,7 @@ function calculateCalibrationSum(digitsOptions) {
         }, []);
     }
 
-    return document
-        .getElementById("input-textarea")
-        .value.split("\n")
+    return parsePuzzleInput()
         .map(extractDigits)
         .map((digits) => {
             if (digits.length === 0) return 0;
