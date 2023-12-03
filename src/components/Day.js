@@ -30,21 +30,18 @@ function Part(props) {
 
 function Day(props) {
     return (
-        <div className="row mb-3">
-            <div className="col-xl-4">
-                <h4>{`Day ${props.day}`}</h4>
-                <p>{props.description}</p>
-            </div>
+        <div>
+            <h4>{`Day ${props.day}`}</h4>
+            <p>{props.description}</p>
 
-            <div className="row col-xl">
+            <div className="row">
                 <Part
-                    className="col-lg"
+                    className="col-md"
                     part="1"
                     calculateResult={props.calculatePart1}
                 ></Part>
-                <div className="col-1"></div>
                 <Part
-                    className="col-lg"
+                    className="col-md"
                     part="2"
                     calculateResult={props.calculatePart2}
                 ></Part>

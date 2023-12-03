@@ -31,7 +31,7 @@ function App() {
                 <div className="row">
                     <InputForm className="col-lg"></InputForm>
 
-                    <div className="mx-4 col-lg">
+                    <div className="mx-lg-4 col-lg">
                         <Day1></Day1>
                         <hr></hr>
                         <Day2></Day2>
