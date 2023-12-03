@@ -9,10 +9,10 @@ function adjacent(part, symbol) {
     );
 }
 
-function makePart() {
+function makePart(y) {
     return {
         value: 0,
-        y: 0,
+        y: y,
         xRange: [],
     };
 }
@@ -21,8 +21,7 @@ function findPartsAndSymbols() {
     var parts = [];
     var symbols = [];
     parsePuzzleInput().forEach((line, y) => {
-        var currentPart = makePart();
-        currentPart.y = y;
+        var currentPart = makePart(y);
 
         line.split("").forEach((char, x) => {
             if ("0123456789".includes(char)) {
@@ -31,7 +30,7 @@ function findPartsAndSymbols() {
             } else {
                 if (currentPart.xRange.length > 0) {
                     parts.push({ ...currentPart });
-                    currentPart = makePart();
+                    currentPart = makePart(y);
                 }
 
                 if (!".".includes(char)) {
