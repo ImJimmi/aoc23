@@ -1,6 +1,7 @@
 import Day1 from "./day01/Day1";
 import Day2 from "./day02/Day2";
 import Day3 from "./day03/Day3";
+import Day4 from "./day04/Day4";
 
 function InputForm(props) {
     return (
@@ -37,6 +38,8 @@ function App() {
                         <Day2></Day2>
                         <hr></hr>
                         <Day3></Day3>
+                        <hr></hr>
+                        <Day4></Day4>
                     </div>
                 </div>
             </div>

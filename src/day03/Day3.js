@@ -82,7 +82,7 @@ function Day3() {
     return (
         <Day
             day={3}
-            description="Weird machine thing"
+            description="Fixing the gondolas to get to the next island"
             calculatePart1={() => {
                 return calculateSumOfMachinePartIDs();
             }}
